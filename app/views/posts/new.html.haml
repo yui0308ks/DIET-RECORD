@@ -1,0 +1,9 @@
+.header
+  = render @header
+.content__title
+  ☆今日の成果☆
+= form_with model: @post, class: :form, local: true do |form|
+  = form.text_field :weight, placeholder: :今日の体重, class: :form__weight
+  = form.text_field :title, placeholder: :タイトル, class: :form__title
+  = form.text_field :content, placeholder: :本文, class: :form__text
+  = form.submit '報告する', class: :form__btn

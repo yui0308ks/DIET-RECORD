@@ -1,3 +1,88 @@
-// Place all the styles related to the tops controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.wrraper {
+  height: 100vh;
+  width: 100vw;
+}
+
+.top__header {
+  background-image: url("/images/1799483.jpg");
+  background-size: 20%;
+  height: 218px;
+  width: 100vw;
+}
+
+.top__header2 {
+  height: 218px;
+  width: 100vw;
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.top__header_content {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 100px;
+  color: rgb(248, 8, 48);
+  text-align: center;
+
+}
+
+.top__main {
+  background: url("sozai_image_127453.jpg");
+  height: calc( 100% - 218px );
+  width: 100vw;
+  display:-webkit-box;
+  display:-ms-flexbox;
+  display:flex;
+  -ms-flex-pack:distribute;
+  justify-content:space-around;
+  align-items: center;
+}
+
+.top__signup_btn_box {
+  display: inline-block;
+  text-decoration: none;
+  background: #ff8181;
+  color: #FFF;
+  width: 150px;
+  height: 150px;
+  line-height: 150px;
+  border-radius: 50%;
+  text-align: center;
+  font-weight: bold;
+  overflow: hidden;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.29);
+  border-bottom: solid 3px #bd6565;
+  transition: .4s;
+  font-size: 25px;
+}
+
+.top__signup_btn_box:active {
+  -webkit-transform: translateY(2px);
+  transform: translateY(2px);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.15);
+  border-bottom: none;
+}
+
+.top__signin_btn_box {
+  display: inline-block;
+  text-decoration: none;
+  background: #ffba78;
+  color: #ffba78;
+  width: 150px;
+  height: 150px;
+  font-size: 25px;
+  line-height: 150px;
+  border-radius: 50%;
+  text-align: center;
+  overflow: hidden;
+  font-weight: bold;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.29);
+  border-bottom: solid 3px #d29963;
+  text-shadow: -1px -1px rgba(255, 255, 255, 0.43), 1px 1px rgba(0, 0, 0, 0.49);
+  transition: .4s;
+}
+
+.top__signin_btn_box:active  {
+  -webkit-transform: translateY(2px);
+  transform: translateY(2px);
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.35);
+  border-bottom: none;
+}
