@@ -9,10 +9,16 @@ class PostsController < ApplicationController
   end
 
   def create
-    Post.create(post_params)
-    redirect_to root_path
+    @post = Post.new(post_params)
+    if @post.save
+      respond_to do |format|
+        format.json
+      end
+    else
+      render :new
+    end
   end
-
+  
   def show
     @post = Post.find(params[:id])
   end
@@ -24,13 +30,13 @@ class PostsController < ApplicationController
   def update
     post = Post.find(params[:id])
     post.update(post_params)
-    redirect_to post_path(post.id)
+    redirect_to user_path(current_user.id)
   end
 
   def destroy
     post = Post.find(params[:id])
     post.destroy
-    redirect_to root_path
+    redirect_to user_path(current_user.id)
   end
 
   private

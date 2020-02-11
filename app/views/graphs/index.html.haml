@@ -1,0 +1,12 @@
+
+-# %canvas#spotsChart{:height => "200", :width => "200"}
+:javascript
+  var graphdays = #{raw @dayline}, graphweights = #{raw @weightline}
+
+-# :javascript
+-#   draw_graph();
+
+
+-# %input{:name => "arr_json", :type => "hidden", :value => @a}
+-# %input.arr_json{:name => "arr_json", :type => "hidden", :value => @arr}/
+%canvas#myLine2Chart{:height => "400", :width => "800"}

@@ -1,0 +1,21 @@
+.movie_contents
+  .movie_content
+    Training movies
+  -# .movie_box
+  -#   %p.lupin ダイエット用動画集
+  .movies
+    .movie1
+      初級編
+      %iframe{:allow => "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture", :allowfullscreen => "", :frameborder => "0", :height => "315", :src => "https://www.youtube.com/embed/PxDVpRv6SqE", :width => "560"}
+    .movie2
+      中級編
+      %iframe{:allow => "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture", :allowfullscreen => "", :frameborder => "0", :height => "315", :src => "https://www.youtube.com/embed/V7SF9Vwb1aQ", :width => "560"}
+    .movie3
+      上級編
+      %iframe{:allow => "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture", :allowfullscreen => "", :frameborder => "0", :height => "315", :src => "https://www.youtube.com/embed/z8JJIc5H9og", :width => "560"}
+
+  .header__title
+    = link_to "DIET-RECORD", user_path(current_user.id), class: "header__title--text"
+
+
+

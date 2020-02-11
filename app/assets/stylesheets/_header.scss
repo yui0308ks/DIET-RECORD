@@ -1,0 +1,30 @@
+.index-header{
+  height: 100px;
+  width: 100%;
+  padding: 0 150px;
+  background-color: pink;
+  background: url('macaron');
+  opacity: 0.5;
+  background-size: contain;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__title{
+  height: 50px;
+  width: 200px;
+  
+}
+
+.header__title--text {
+  font-size: 28px;
+  color: red;
+  font-weight: bold;
+  font-family: 'Press Start 2P', cursive;
+}
+
+.btn {
+  margin-left: 10px;
+}

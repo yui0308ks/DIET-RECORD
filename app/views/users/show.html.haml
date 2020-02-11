@@ -1,7 +1,9 @@
-.header
-  =render @header
-.postTitle
-  = @user.nickname
-  さんの投稿一覧
-- @posts.each do |post|
-  = render partial: "posts/post", locals: { post: post }
+= render partial: 'posts/header'
+.contents
+  .postTitle1
+    = @user.nickname
+    さんの体重記録
+  - @posts.each do |post|
+    = render partial: "posts/post", locals: { post: post }
+  .contents__page
+  = paginate(@posts)

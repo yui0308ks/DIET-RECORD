@@ -1,9 +1,13 @@
-.header
-  = render @header
-.content__title
-  投稿の編集
-= form_with model: @post, class: :form, local: true do |form|
-  = form.text_field :weight, placeholder: :今日の体重, class: :form__weight
-  = form.text_field :title, placeholder: :タイトル, class: :form__title
-  = form.text_area :content, placeholder: :ブログ本文, class: :form__text
-  = form.submit '投稿する', class: :form__btn
+= render partial: 'header'
+.contents
+  .content__title
+    投稿の編集
+  .content__form
+  = form_with model: @post, class: :form, local: true do |form|
+    = form.text_field :weight, placeholder: :今日の体重, class:"form-control"
+    .2
+    = form.text_field :title, placeholder: :タイトル, class:"form-control"
+    = form.text_area :content, placeholder: :本文, class:"form-control"
+    = form.submit '変更する', class: :form__btn
+
+

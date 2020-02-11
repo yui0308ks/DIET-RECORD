@@ -1,0 +1,14 @@
+.index-header
+  .header__title
+    = link_to "DIET-RECORD", root_path, class: "header__title--text"
+  .header__right
+    -# = link_to current_user.nickname, user_path(current_user), class: "header__right--btn"
+    = link_to new_post_path, class: "btn btn-danger" do
+      新規投稿
+    = link_to destroy_user_session_path, method: :delete, class: "btn btn-danger" do
+      ログアウト
+  .header__right2
+    = link_to movies_path, class: "btn btn-danger" do
+      おすすめ動画
+    = link_to graphs_path, class: "btn btn-danger" do
+      グラフで見る

@@ -1,17 +1,49 @@
-%h2 Log in
-= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
-  .field
-    = f.label :email
-    %br/
-    = f.email_field :email, autofocus: true, autocomplete: "email"
-  .field
-    = f.label :password
-    %br/
-    = f.password_field :password, autocomplete: "current-password"
-  - if devise_mapping.rememberable?
-    .field
-      = f.check_box :remember_me
-      = f.label :remember_me
-  .actions
-    = f.submit "Log in"
-= render "devise/shared/links"
+.session__new_body
+  %link#bootstrap-css{:href => "//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css", :rel => "stylesheet"}/
+  %script{:src => "//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"}
+  %script{:src => "//code.jquery.com/jquery-1.11.1.min.js"}
+  / ---- Include the above in your HEAD tag --------
+  .container
+    .wrapper.form-signin
+      = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+        = render "devise/shared/links"
+        %h3.form-signin-heading Welcome Back! Please Sign In
+        %hr.colorgraph/
+        %br/
+        = f.text_field :nickname, autofocus: true, class:"form-control", placeholder: "ニックネーム"
+        = f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control", placeholder: "メールアドレス"
+        = f.password_field :password, autocomplete: "current-password", class: "form-control", placeholder: "パスワード"
+        -# %a.button{:name => "Submit", :type => "Submit", :value => "Login"}
+        -#   %span
+            Login
+        -# %buttonn.btnn.btnn-lg.btnn-primary.btnn-block{:name => "Submit", :type => "Submit", :value => "Login"} Login
+              -# %form.form-signin{:action => "", :method => "post", :name => "Login_Form"}
+        .actions
+          = f.submit "Sign in"
+
+
+
+
+
+
+
+
+
+
+
+
+-#   .field
+-#     = f.label :email
+-#     %br/
+-#     = f.email_field :email, autofocus: true, autocomplete: "email"
+-#   .field
+-#     = f.label :password
+-#     %br/
+-# = f.password_field :password, autocomplete: "current-password"
+-#   - if devise_mapping.rememberable?
+-#     .field
+-#       = f.check_box :remember_me
+-#       = f.label :remember_me
+-#   .actions
+-#     = f.submit "Log in"
+-# = render "devise/shared/links"
